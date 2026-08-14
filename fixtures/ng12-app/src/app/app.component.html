@@ -1,0 +1,8 @@
+<div class="wrapper" *ngIf="loaded">
+  <h1>{{ title }}</h1>
+  <ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+  <div *ngIf="title === 'ng12-app'; else fallback">Primary</div>
+  <ng-template #fallback>Fallback</ng-template>
+</div>
